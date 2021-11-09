@@ -4,17 +4,32 @@ using UnityEngine;
 
 public class variable : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public float coffeetemp = 80.5f;
+    float hottemp = 70.0f;
+    float coldtemp = 40.0f;
+    void Update()
     {
-        Debug.Log(transform.position.x);
-
-        if (transform.position.y <= 5f)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log("fuckkkkk!!!!");
+            temptest();
+        }
+        coffeetemp -= Time.deltaTime * 5f;
+    }
+    void temptest()
+    {
+        if (coffeetemp > hottemp)
+        {
+            print("It's too hot.");
+        }
+
+        else if (coffeetemp < coldtemp)
+        {
+            print("It's so cold.");
+        }
+        else
+        {
+            print("It's just right.");
         }
     }
-
-    // Update is called once per frame
     
 }
