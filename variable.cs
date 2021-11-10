@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class variable : MonoBehaviour
 {
-    public float coffeetemp = 80.5f;
+    public float coffeetemp = 80.0f;
     float hottemp = 70.0f;
     float coldtemp = 40.0f;
     
